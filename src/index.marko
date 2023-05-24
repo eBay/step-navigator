@@ -1,0 +1,43 @@
+$ const { currentPage } = state || {};
+
+<div class="se-step-navigator">
+    <h2>Step ${state.currentPage}</h2>
+
+    <ebay-progress-stepper
+        a11y-heading-tag=""
+        a11y-heading-text="Shipment progress"
+        current=currentPage
+    >
+        <@step>
+            <@title>Started</@title>
+            July 3rd
+        </@step>
+        <@step>
+            <@title>Shipped</@title>
+            July 4th
+        </@step>
+        <@step current>
+            <@title>Transit</@title>
+            July 5th
+        </@step>
+        <@step>
+            <@title>Delivered</@title>
+            July 6th
+        </@step>
+    </ebay-progress-stepper>
+    <div class="se-step-navigator__content">
+        <for|template, index| of=input && input.renderBody>
+
+            <if(index === currentPage)>
+                <${template}/>
+            </if>
+        </for>
+    </div>
+
+    <button onClick("goToPreviousStep")>
+        Previous
+    </button>
+    <button onClick("goToNextStep")>
+        Next
+    </button>
+</div>

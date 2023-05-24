@@ -1,0 +1,94 @@
+{
+    "name": "@ebay/selling-ui-step-navigator",
+    "version": "4.3.1",
+    "description": "This component allows a multi step process with the ability to go back and forth on views",
+    "scripts": {
+        "lint": "yarn lint:less && yarn lint:js",
+        "lint:less": "stylelint src/**/*.less",
+        "lint:js": "eslint src",
+        "test": "jest",
+        "coverage": "yarn test --coverage",
+        "coverage:view": "open ./coverage/lcov-report/index.html",
+        "clean": "rm -rf .cache .beans coverage log static .telemetry.json $(find src -name '*.marko.js')",
+        "storybook": "start-storybook --port 8090",
+        "prepush": "yarn lint && yarn test",
+        "deploy-storybook": "storybook-to-ghpages --ci",
+        "semantic-release": "git reset --hard && semantic-release"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.corp.ebay.com:pcanella/step-navigator.git"
+    },
+    "keywords": [
+        "selling-ui",
+        "nodejs",
+        "marko",
+        "ebay"
+    ],
+    "author": "DL-eBay-selling-ui-dev@corp.ebay.com",
+    "license": "ISC",
+    "dependencies": {
+        "abortcontroller-polyfill": "^1",
+        "just-debounce-it": "^1",
+        "just-safe-get": "^2",
+        "whatwg-fetch": "^3",
+        "@ebay/skin": "^16",
+        "@ebay/ebayui-core": "^12"
+    },
+    "peerDependencies": {
+        "@ebay/ebayui-core": "^12",
+        "@ebay/selling-ui-field-card": "^9",
+        "@ebay/selling-ui-panel-container": "^9",
+        "@ebay/selling-ui-panel-section": "^9",
+        "@ebay/selling-ui-radio-group": "^9",
+        "@ebay/selling-ui-search-box": "^9",
+        "@ebay/skin": "^16",
+        "marko": "^5"
+    },
+    "devDependencies": {
+        "@babel/core": "^7",
+        "@babel/eslint-parser": "^7",
+        "@babel/preset-env": "^7",
+        "@commitlint/cli": "^8",
+        "@commitlint/config-conventional": "^8",
+        "@ebay/browserslist-config": "^1",
+        "@ebay/ebayui-core": "^12",
+        "@ebay/selling-ui-field-card": "^9",
+        "@ebay/selling-ui-panel-container": "^9",
+        "@ebay/selling-ui-panel-section": "^9",
+        "@ebay/selling-ui-radio-group": "^9",
+        "@ebay/selling-ui-search-box": "^9",
+        "@ebay/skin": "^16",
+        "@marko/fixture-snapshots": "^2",
+        "@marko/jest": "^3",
+        "@marko/testing-library": "^4",
+        "@marko/webpack": "^6",
+        "@semantic-release/changelog": "^5",
+        "@semantic-release/git": "^9",
+        "@semantic-release/github": "^7",
+        "@semantic-release/npm": "^7",
+        "@storybook/marko": "^6",
+        "@storybook/storybook-deployer": "^2",
+        "@testing-library/jest-dom": "^5",
+        "babel-loader": "^8",
+        "eslint": "^7",
+        "eslint-config-ebay": "^1",
+        "eslint-plugin-jest": "^24",
+        "husky": "^3",
+        "jest": "^26",
+        "jest-junit": "^12",
+        "jest-when": "^3",
+        "less": "^3",
+        "less-loader": "^7",
+        "marko": "^5",
+        "semantic-release": "^17",
+        "stylelint": "^9",
+        "stylelint-config-standard": "^20"
+    },
+    "publishConfig": {
+        "registry": "https://artifactory.corp.ebay.com/artifactory/api/npm/npm-selling/"
+    },
+    "storybook-deployer": {
+        "commitMessage": "chore: deploy storybook"
+    }
+}
