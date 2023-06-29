@@ -6,10 +6,14 @@ module.exports = class {
         };
     }
 
+    onMount(input) {
+        console.log(this.input);
+    }
+
     goToNextStep() {
         const { currentPage } = this.state;
         const nextPageIdx = currentPage + 1;
-        if (nextPageIdx >= this.input.renderBody.length) {
+        if (nextPageIdx >= this.input.step.length) {
             return;
         } if (currentPage < 3) {
         this.setState({ currentPage: nextPageIdx }); 
