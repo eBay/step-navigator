@@ -1,4 +1,4 @@
-# se-step-navigator
+# 🪜 se-step-navigator
 
 Use this component as a back and forth method for different views
 
