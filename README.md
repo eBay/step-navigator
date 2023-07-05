@@ -2,6 +2,11 @@
 
 Use this component as a back and forth method for different views
 
+# Preview
+
+![giphy (1)](https://media.github.corp.ebay.com/user/6936/files/3e64669c-4886-44ea-acd9-c5fb073de690)
+
+
 # Usage
 
 ```marko
