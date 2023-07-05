@@ -43,12 +43,12 @@ Use this component as a back and forth method for different views. A more usable
 
 | Name              | Type           | Required | Description
 | ---               | ---            | ---      | ---
-| title             | String       | No |  overarching title text (appears at top of component)
-| nextStepText             | String       | No |  Next Button text. Defaults to "Next" if empty
-| previousStepText             | String       | No |  Previous Button text. Defaults to "Previous" if empty
-| a11yHeadingTag             | String       | Yes |  heading tag for progress stepper
-| a11yHeadingText             | String       | Yes |heading text for progress stepper which will be clipped
-| defaultState					|String  	| No| If complete, then all items will be in complete state by default. If upcoming, all items will be in upcoming state. If attention, then the current item will show as blocked. Otherwise, the default (active), will change items based on the current item (current defaults to first step if not set).
+| `title`           | `String`       | No |  overarching title text (appears at top of component)
+| `nextStepText`             | `String`       | No |  Next Button text. Defaults to "Next" if empty
+| `previousStepText`             | `String`       | No |  Previous Button text. Defaults to "Previous" if empty
+| `a11yHeadingTag`             | `String`       | Yes |  heading tag for progress stepper
+| `a11yHeadingText`             | `String`       | Yes |heading text for progress stepper which will be clipped
+| `defaultState`					|`String`  	| No| If complete, then all items will be in complete state by default. If upcoming, all items will be in upcoming state. If attention, then the current item will show as blocked. Otherwise, the default (active), will change items based on the current item (current defaults to first step if not set).
 
 
 
