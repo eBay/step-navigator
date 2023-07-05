@@ -1,36 +1,42 @@
-import component from "../index.marko";
-import testComponent from "./test_template.marko";
-import testComponent2 from "./test_template-2.marko";
+import component from '../index.marko';
+import testComponent from './test_template.marko';
+import testComponent2 from './test_template-2.marko';
+import testComponent3 from './test_template-3.marko';
 
 export default {
-  title: "Step Navigator",
-  component,
+    title: 'Step Navigator',
+    component
 };
 
 function createBody(html) {
-  return (out) => out.html(html);
+    return (out) => out.html(html);
 }
 
 export const Default = () => ({
-  input: {
-    title: "Step Navigator",
-    previousStepText:"Previous",
-    nextStepText:"Next",
-    width: '700px',
-    // renderBody: [testComponent, testComponent2],
-    step: [
-      {
-        a11yText: "Some A11y Text",
-        title: createBody("<span>STEP 1 TITLE</span>"),
-        subtitle: createBody("<span>STEP 1 SUBTITLE</span>"),
-        content: testComponent
-      },
-      {
-        a11yText: "Some A11y Text",
-        title: createBody("STEP 2 TITLE"),
-        subtitle: createBody("STEP 2 SUBTITLE"),
-        content: testComponent2
-      }
-    ]
-  }
+    input: {
+        title: 'Step Navigator',
+        previousStepText: 'Previous',
+        nextStepText: 'Next',
+        width: '700px',
+        step: [
+        {
+            a11yText: 'Some A11y Text',
+            title: createBody('<span>Step 1 Title</span>'),
+            subtitle: createBody('<span>#1 Subtitle</span>'),
+            content: testComponent
+        },
+        {
+            a11yText: 'Some A11y Text',
+            title: createBody('<span>Step 2 Title</span>'),
+            subtitle: createBody('<span>#2 Subtitle</span>'),
+            content: testComponent2
+        },
+        {
+            a11yText: 'Some A11y Text',
+            title: createBody('<span>Step 3 Title</span>'),
+            subtitle: createBody('<span>#3 Subtitle</span>'),
+            content: testComponent3
+        }
+        ]
+    }
 });

@@ -18,7 +18,7 @@ $ const { currentPage } = state || {};
             </@step>
         </for>
     </ebay-progress-stepper>
-    <div class="se-step-navigator__content">
+    <div class="se-step-navigator__content" style=`min-height=${input.minContentHeight}`>
         <for|output, index| of=input && input.step>
 
             <if(index === currentPage)>

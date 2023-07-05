@@ -44,6 +44,10 @@ Use this component as a back and forth method for different views
 | a11yHeadingTag             | String       | Yes |  heading tag for progress stepper
 | a11yHeadingText             | String       | Yes |heading text for progress stepper which will be clipped
 | defaultState					|String  	| No| If complete, then all items will be in complete state by default. If upcoming, all items will be in upcoming state. If attention, then the current item will show as blocked. Otherwise, the default (active), will change items based on the current item (current defaults to first step if not set).
+| 
+minContentHeight					|String  	| No| The minimum container height.(Defaults to 500px)
+minContentWidth					|String  	| No| The minimum container width.(Defaults to 500px)
+
 
 
 
@@ -52,7 +56,7 @@ Use this component as a back and forth method for different views
 
 | Name               | Data  | Type     | Description
 | ---                | ---   | ---      | ---
-| `previous-button-click`  | `{currentIdx, title, subtitle}`  | No | Event returned when the Previous button is clicked
-| `next-button-click`  | `{currentIdx, title, subtitle}`  | No | Event returned when the Next button is clicked
+| `previous-button-click`  | `{currentIdx}`  | No | Event returned when the Previous button is clicked
+| `next-button-click`  | `{currentIdx}`  | No | Event returned when the Next button is clicked
 
 ## Notes
