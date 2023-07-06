@@ -1,0 +1,7 @@
+{
+    "dependencies": [
+      "@ebay/ebayui-core/ebay-button",
+      "@ebay/ebayui-core/ebay-progress-stepper",
+      "style.less"
+    ]
+  }
