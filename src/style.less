@@ -1,5 +1,6 @@
 .se-step-navigator {
     &__footer {
+        display: flex;
         padding-top: 15px;
 
         button.btn {
@@ -11,5 +12,11 @@
         min-height: 500px;
         min-width: 500px;
         overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+    }
+
+    &__static-content {
+        padding: 15px;
     }
 }

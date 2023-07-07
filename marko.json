@@ -1,5 +1,24 @@
 {
-    "<se-step-navigator>": {
-        "template": "./src/index.marko"
+    "taglib-id": "se-step-navigator",
+    "tags": {
+        "se-step-navigator": {
+            "template": "./src/index.marko",
+            "attributes": {
+                "title": "string",
+                "previousStepText": "string",
+                "nextStepText": "string",
+                "isProgressStepperHidden": "boolean"
+            },
+            "@step <step>[]": {
+                "attributes": {
+                    "a11yText": "string"
+                },
+                "@title": "string",
+                "@subtitle": "string",
+                "@content": "expression"
+            },
+
+            "@static-content": "expression"
+        }
     }
 }

@@ -1,33 +1,49 @@
 $ const { currentPage } = state || {};
+$ const { isProgressStepperHidden = false } = input;
 
 <div class="se-step-navigator">
     <h2>${input.title || ""}</h2>
-
-    <ebay-progress-stepper
-        style=`width: ${input.width};`
-        a11y-heading-tag=input.a11yHeadingTag
-        a11y-heading-text=input.a11yHeadingText
-        current=currentPage
+    <if(!isProgressStepperHidden)>
+        <ebay-progress-stepper
+            style=`width: ${input.width};`
+            a11y-heading-tag=input.a11yHeadingTag
+            a11y-heading-text=input.a11yHeadingText
+            current=currentPage>
+            <for|someOutput, index| of=input && input.step>
+                <@step
+                    a11yText=someOutput.a11yText
+                    current=currentPage === index
+                >
+                    <@title>
+                        <${someOutput.title}/>
+                    </@title>
+                    <${someOutput.subtitle}/>
+                </@step>
+            </for>
+        </ebay-progress-stepper>
+    </if>
+    <div
+        class="se-step-navigator__content"
+        style=`min-height=${input.minContentHeight}`
     >
-        <for|someOutput, index| of=input && input.step>
-            <@step a11yText=someOutput.a11yText current=currentPage === index>
-                <@title>
-                    <${someOutput.title}/>
-                </@title>
-                <${someOutput.subtitle}/>
-            </@step>
-        </for>
-    </ebay-progress-stepper>
-    <div class="se-step-navigator__content" style=`min-height=${input.minContentHeight}`>
         <for|output, index| of=input && input.step>
 
             <if(index === currentPage)>
                 <${output.content}/>
             </if>
         </for>
+
+        <div class="se-step-navigator__static-content">
+            <${input["static-content"]}/>
+        </div>
     </div>
 
-    <div class="se-step-navigator__footer">
+    <div
+        class="se-step-navigator__footer"
+        style=`justify-content: ${
+            input.buttonAlignment || "flex-start"
+        }; width: ${input.width};`
+    >
         <ebay-button onClick("goToPreviousStep")>
             ${input.previousStepText}
         </ebay-button>

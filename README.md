@@ -35,10 +35,16 @@ Use this component as a back and forth method for different views. A more usable
  	 		...
  	 	</@content>
  	 </@step>
-
+	 <@static-content>Some Static Content that shows in all steps!</@static-content>
  	 </se-step-navigator>
 ```
 
+## Nested Tags
+
+| Name              | Has Nested Tags           | Required | Description
+| ---               | ---            | ---      | ---
+| `step`           | `Yes`       | Yes |  Each step can contain the nested tags `@title`, `@subtitle` and `@content`. These map to both the `progress-stepper` at the top and the `content` are below it.
+| `@static-content`           | `No`       | No |  Add static content (like a static sidebar component) outside of the "step" flow. 
 ## Input
 
 | Name              | Type           | Required | Description
@@ -49,7 +55,8 @@ Use this component as a back and forth method for different views. A more usable
 | `a11yHeadingTag`             | `String`       | Yes |  heading tag for progress stepper
 | `a11yHeadingText`             | `String`       | Yes |heading text for progress stepper which will be clipped
 | `defaultState`					|`String`  	| No| If complete, then all items will be in complete state by default. If upcoming, all items will be in upcoming state. If attention, then the current item will show as blocked. Otherwise, the default (active), will change items based on the current item (current defaults to first step if not set).
-
+| `buttonAlignment`					|`justify-content` types	| No| Alignment of bottom buttons. Defaults to `flex-start`. See [all types at MDN documentation on `justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content). 
+| `isProgressStepperHidden`					|`justify-content` types	| No| Toggle the ProgressStepper. Most often used when `steps <= 2` per Playbook specs. Default: `false`. 
 
 
 
@@ -60,4 +67,5 @@ Use this component as a back and forth method for different views. A more usable
 | `previous-button-click`  | `{currentIdx}`  | No | Event returned when the Previous button is clicked
 | `next-button-click`  | `{currentIdx}`  | No | Event returned when the Next button is clicked
 
-## Notes
+## Contributing
+- Coming soon
