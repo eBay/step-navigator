@@ -1,7 +1,9 @@
-module.exports = class {
+export default class {
     onCreate() {
         this.state = {
-            currentPage: 0
+            currentPage: 0,
+            nextBtnDisabled: false,
+            prevButtonDisabled: true
         };
     }
 
@@ -11,12 +13,14 @@ module.exports = class {
 
         this.emit('next-button-click', { index: nextPageIdx });
 
-        if (nextPageIdx >= this.input.step.length) {
-            return;
+        if (currentPage < this.input.step.length - 1) {
+            this.setState({ currentPage: nextPageIdx, nextBtnDisabled: false, prevButtonDisabled: false });
         }
 
-        if (currentPage < 3) {
-            this.setState({ currentPage: nextPageIdx });
+        if (nextPageIdx === this.input.step.length - 1) {
+            this.setState({ nextBtnDisabled: true, prevButtonDisabled: false });
+
+            return;
         }
     }
 
@@ -26,10 +30,12 @@ module.exports = class {
 
         this.emit('previous-button-click', { index: prevPageIdx });
 
-        if (currentPage === 0) {
+        this.setState({ currentPage: prevPageIdx, nextBtnDisabled: false, prevButtonDisabled: false });
+
+        if (prevPageIdx === 0) {
+            this.setState({ nextBtnDisabled: false, prevButtonDisabled: true });
+
             return;
         }
-
-        this.setState({ currentPage: prevPageIdx });
     }
-};
+}

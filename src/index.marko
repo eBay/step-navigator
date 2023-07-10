@@ -1,6 +1,7 @@
 $ const { currentPage } = state || {};
 $ const { isProgressStepperHidden = false } = input;
 
+
 <div class="se-step-navigator">
     <h2>${input.title || ""}</h2>
     <if(!isProgressStepperHidden)>
@@ -44,10 +45,10 @@ $ const { isProgressStepperHidden = false } = input;
             input.buttonAlignment || "flex-start"
         }; width: ${input.width};`
     >
-        <ebay-button onClick("goToPreviousStep")>
+        <ebay-button disabled=state.prevButtonDisabled onClick("goToPreviousStep")>
             ${input.previousStepText}
         </ebay-button>
-        <ebay-button priority="primary" onClick("goToNextStep")>
+        <ebay-button disabled=state.nextBtnDisabled priority="primary" onClick("goToNextStep")>
             ${input.nextStepText}
         </ebay-button>
     </div>
