@@ -1,4 +1,4 @@
-export default class {
+module.exports = class {
     onCreate() {
         this.state = {
             currentPage: 0,
@@ -38,4 +38,4 @@ export default class {
             return;
         }
     }
-}
+};

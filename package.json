@@ -28,8 +28,10 @@
     "author": "DL-eBay-selling-ui-dev@corp.ebay.com",
     "license": "ISC",
     "dependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.22.5",
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
+        "babel-jest": "^29.6.1",
         "jest-cli": "^29.6.1",
         "jest-environment-jsdom": "^29.6.1"
     },
@@ -48,7 +50,7 @@
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
         "@marko/fixture-snapshots": "^2",
-        "@marko/jest": "^3",
+        "@marko/jest": "^5.1",
         "@marko/testing-library": "^4",
         "@marko/webpack": "^6",
         "@storybook/marko": "^6",
@@ -63,7 +65,7 @@
         "jest-junit": "^12",
         "less": "^3",
         "less-loader": "^7",
-        "marko": "^5",
+        "marko": "^4 || 5",
         "stylelint": "^9",
         "stylelint-config-standard": "^20"
     },

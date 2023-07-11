@@ -1,7 +1,7 @@
 const testComponent = require('../example-components/test_template.marko');
 const testComponent2 = require('../example-components/test_template-2.marko');
 const testComponent3 = require('../example-components/test_template-3.marko');
-const staticComponent = require('../static_template.marko');
+const staticComponent = require('../example-components/static_template.marko');
 
 function createBody(html) {
     return (out) => out.html(html);

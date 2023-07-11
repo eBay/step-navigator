@@ -23,7 +23,11 @@ module.exports = {
         'lcov',
         'cobertura'
     ],
+    transform: {},
     coverageDirectory: 'coverage',
+    setupFilesAfterEnv: [
+        '@marko/testing-library/cleanup-after-each'
+    ],
     projects: [
         project('browser', {
             preset: '@marko/jest/preset/browser',

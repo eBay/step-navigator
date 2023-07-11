@@ -3,7 +3,9 @@ $ const { isProgressStepperHidden = false } = input;
 
 
 <div class="se-step-navigator">
-    <h2>${input.title || ""}</h2>
+    <if (input.title)>
+        <h2>${input.title || ""}</h2>
+    </if>
     <if(!isProgressStepperHidden)>
         <ebay-progress-stepper
             style=`width: ${input.width};`
@@ -28,7 +30,6 @@ $ const { isProgressStepperHidden = false } = input;
         style=`min-height=${input.minContentHeight}`
     >
         <for|output, index| of=input && input.step>
-
             <if(index === currentPage)>
                 <${output.content}/>
             </if>
