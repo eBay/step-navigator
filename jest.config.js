@@ -25,21 +25,16 @@ module.exports = {
     ],
     transform: {},
     coverageDirectory: 'coverage',
-    setupFilesAfterEnv: [
-        '@marko/testing-library/cleanup-after-each'
-    ],
     projects: [
         project('browser', {
             preset: '@marko/jest/preset/browser',
             setupFilesAfterEnv: [
-                '@marko/testing-library/cleanup-after-each',
                 '@testing-library/jest-dom'
             ]
         }),
         project('server', {
             preset: '@marko/jest/preset/node',
             setupFilesAfterEnv: [
-                '@marko/testing-library/cleanup-after-each'
             ]
         })
     ],

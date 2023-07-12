@@ -51,7 +51,7 @@
         "@ebay/skin": "^16",
         "@marko/fixture-snapshots": "^2",
         "@marko/jest": "^5.1",
-        "@marko/testing-library": "^4",
+        "@marko/testing-library": "6",
         "@marko/webpack": "^6",
         "@storybook/marko": "^6",
         "@storybook/storybook-deployer": "^2",
