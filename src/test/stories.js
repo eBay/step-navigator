@@ -44,6 +44,32 @@ export const Default = () => ({
     }
 });
 
+
+export const StepperNoStatic = () => ({
+    input: {
+        title: 'Step Navigator with no static content',
+        previousStepText: 'Previous',
+        nextStepText: 'Next',
+        width: '700px',
+        buttonAlignment: 'flex-start',
+        step: [
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 1 Title</span>'),
+                subtitle: createBody('<span>#1 Subtitle</span>'),
+                content: testComponent
+            },
+            {
+                a11yText: 'Some A11y Text #2',
+                title: createBody('<span>Step 2 Title</span>'),
+                subtitle: createBody('<span>#2 Subtitle</span>'),
+                content: testComponent2
+            }
+        ]
+    }
+});
+
+
 export const StepperHidden = () => ({
     input: {
         isProgressStepperHidden: true,

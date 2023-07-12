@@ -2,7 +2,7 @@ $ const { currentPage } = state || {};
 $ const { isProgressStepperHidden = false } = input;
 
 <div class="se-step-navigator">
-    <if (input.title)>
+    <if(input.title)>
         <h2>${input.title || ""}</h2>
     </if>
     <if(!isProgressStepperHidden)>
@@ -10,7 +10,8 @@ $ const { isProgressStepperHidden = false } = input;
             style=`width: ${input.width};`
             a11y-heading-tag=input.a11yHeadingTag
             a11y-heading-text=input.a11yHeadingText
-            current=currentPage>
+            current=currentPage
+        >
             <for|someOutput, index| of=input && input.step>
                 <@step
                     a11yText=someOutput.a11yText
@@ -29,20 +30,19 @@ $ const { isProgressStepperHidden = false } = input;
         style=`min-height=${input.minContentHeight}`
     >
         <for|output, index| of=input && input.step>
-            <h2 class="se-step-navigator__title">
-                <${output && output.title}/>
-            </h2>
-            <div style={display: index !== currentPage && 'none' }>
+            <div style={ display: index !== currentPage && "none" }>
+                <h2 class="se-step-navigator__title">
+                    <${output && output.title}/>
+                </h2>
                 <${output && output.content}/>
             </div>
         </for>
 
-    <if(input["static-content"])>
-        <div class="se-step-navigator__static-content">
-            <${input["static-content"]}/>
-        </div>    
-    </if>
-
+        <if(input["static-content"])>
+            <div class="se-step-navigator__static-content">
+                <${input["static-content"]}/>
+            </div>
+        </if>
     </div>
 
     <div
@@ -51,10 +51,17 @@ $ const { isProgressStepperHidden = false } = input;
             input.buttonAlignment || "flex-start"
         }; width: ${input.width};`
     >
-        <ebay-button disabled=state.prevButtonDisabled onClick("goToPreviousStep")>
+        <ebay-button
+            disabled=state.prevButtonDisabled
+            onClick("goToPreviousStep")
+        >
             ${input.previousStepText}
         </ebay-button>
-        <ebay-button disabled=state.nextBtnDisabled priority="primary" onClick("goToNextStep")>
+        <ebay-button
+            disabled=state.nextBtnDisabled
+            priority="primary"
+            onClick("goToNextStep")
+        >
             ${input.nextStepText}
         </ebay-button>
     </div>
