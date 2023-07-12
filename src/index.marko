@@ -37,9 +37,12 @@ $ const { isProgressStepperHidden = false } = input;
             </div>
         </for>
 
+    <if(input["static-content"])>
         <div class="se-step-navigator__static-content">
             <${input["static-content"]}/>
-        </div>
+        </div>    
+    </if>
+
     </div>
 
     <div
