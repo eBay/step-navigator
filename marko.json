@@ -3,16 +3,12 @@
     "tags": {
         "se-step-navigator": {
             "template": "./src/index.marko",
-            "attributes": {
-                "title": "string",
-                "previousStepText": "string",
-                "nextStepText": "string",
-                "isProgressStepperHidden": "boolean"
-            },
+            "@title": "string",
+            "@previousStepText": "string",
+            "@nextStepText": "string",
+            "@isProgressStepperHidden": "boolean",
             "@step <step>[]": {
-                "attributes": {
-                    "a11yText": "string"
-                },
+                "@a11yText": "string",
                 "@title": "string",
                 "@subtitle": "string",
                 "@content": "expression"

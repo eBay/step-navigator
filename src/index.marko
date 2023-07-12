@@ -1,7 +1,6 @@
 $ const { currentPage } = state || {};
 $ const { isProgressStepperHidden = false } = input;
 
-
 <div class="se-step-navigator">
     <if (input.title)>
         <h2>${input.title || ""}</h2>
@@ -30,9 +29,12 @@ $ const { isProgressStepperHidden = false } = input;
         style=`min-height=${input.minContentHeight}`
     >
         <for|output, index| of=input && input.step>
-            <if(index === currentPage)>
-                <${output.content}/>
-            </if>
+            <h2 class="se-step-navigator__title">
+                <${output && output.title}/>
+            </h2>
+            <div style={display: index !== currentPage && 'none' }>
+                <${output && output.content}/>
+            </div>
         </for>
 
         <div class="se-step-navigator__static-content">
