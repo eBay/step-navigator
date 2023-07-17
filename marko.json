@@ -14,7 +14,10 @@
                 "@content": "expression"
             },
 
-            "@static-content": "expression"
+            "@static-content": {
+                "type": "expression", 
+                "target-property": "static"
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ export const Default = () => ({
         nextStepText: 'Next',
         width: '700px',
         buttonAlignment: 'flex-start',
-        'static-content': staticComponent,
+        static: staticComponent,
         step: [
             {
                 a11yText: 'Some A11y Text',
@@ -43,7 +43,6 @@ export const Default = () => ({
         ]
     }
 });
-
 
 export const StepperNoStatic = () => ({
     input: {
@@ -69,7 +68,6 @@ export const StepperNoStatic = () => ({
     }
 });
 
-
 export const StepperHidden = () => ({
     input: {
         isProgressStepperHidden: true,
@@ -78,7 +76,7 @@ export const StepperHidden = () => ({
         nextStepText: 'Next',
         width: '700px',
         buttonAlignment: 'flex-start',
-        'static-content': staticComponent,
+        static: staticComponent,
         step: [
             {
                 a11yText: 'Some A11y Text',

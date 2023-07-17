@@ -31,18 +31,16 @@ $ const { isProgressStepperHidden = false } = input;
     >
         <for|output, index| of=input && input.step>
             <div style={ display: index !== currentPage && "none" }>
-                <h2 class="se-step-navigator__title">
-                    <${output && output.title}/>
-                </h2>
                 <${output && output.content}/>
             </div>
         </for>
 
-        <if(input["static-content"])>
-            <div class="se-step-navigator__static-content">
-                <${input["static-content"]}/>
-            </div>
-        </if>
+        <div
+            class="se-step-navigator__static-content"
+            style={ display: !input["static"] && "none" }
+        >
+            <${input["static"]}/>
+        </div>
     </div>
 
     <div
