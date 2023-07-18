@@ -27,7 +27,7 @@ $ const { isProgressStepperHidden = false } = input;
     </if>
     <div
         class="se-step-navigator__content"
-        style=`min-height=${input.minContentHeight}`
+        style=input['content-styles']
     >
         <for|output, index| of=input && input.step>
             <div style={ display: index !== currentPage && "none" }>
