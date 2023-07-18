@@ -8,8 +8,8 @@
             "@nextStepText": "string",
             "@isProgressStepperHidden": "boolean",
             "@content-styles": "string",
-            "width": "string",
-            "buttonAlignment": "string",
+            "@width": "string",
+            "@buttonAlignment": "string",
             "@step <step>[]": {
                 "@a11yText": "string",
                 "@title": "string",
