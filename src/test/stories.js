@@ -154,3 +154,30 @@ export const StepperHidden = () => ({
         ]
     }
 });
+
+export const StepperWithFixedWidthAndNotFluid = () => ({
+    input: {
+        fluid: false,
+        isProgressStepperHidden: false,
+        title: 'Step Navigator with Fixed Width and Not Fluid',
+        previousStepText: 'Previous',
+        nextStepText: 'Next',
+        width: '700px',
+        buttonAlignment: 'flex-start',
+        static: staticComponent,
+        step: [
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 1 Title</span>'),
+                subtitle: createBody('<span>#1 Subtitle</span>'),
+                content: testComponent
+            },
+            {
+                a11yText: 'Some A11y Text #2',
+                title: createBody('<span>Step 2 Title</span>'),
+                subtitle: createBody('<span>#2 Subtitle</span>'),
+                content: testComponent2
+            }
+        ]
+    }
+});
