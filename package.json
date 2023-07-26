@@ -1,6 +1,6 @@
 {
     "name": "@ebay/selling-ui-step-navigator",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "description": "This component allows a multi step process with the ability to go back and forth on views",
     "scripts": {
         "lint": "yarn lint:less && yarn lint:js",
