@@ -18,7 +18,7 @@ module.exports = class {
         }
 
         if (nextPageIdx === this.input.step.length - 1) {
-            this.setState({ nextBtnDisabled: true, prevButtonDisabled: false });
+            this.setState({ prevButtonDisabled: false });
 
             return;
         }

@@ -38,7 +38,7 @@
     "peerDependencies": {
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
-        "marko": "^5"
+        "marko": "^4 || ^5"
     },
     "devDependencies": {
         "@babel/core": "^7",
