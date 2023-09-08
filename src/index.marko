@@ -1,5 +1,5 @@
 $ const { currentPage } = state || {};
-$ const { isProgressStepperHidden = false, width } = input;
+$ const { isProgressStepperHidden = false, width, nextStepButtonPriority = 'primary', previousStepButtonPriority = 'secondary' } = input;
 $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed' : 'se-step-navigator__stepper-wrapper';
 <div class="se-step-navigator">
     <if(input.title)>
@@ -42,24 +42,30 @@ $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed
         </div>
     </div>
 
-    <div
-        class="se-step-navigator__footer"
-        style=`justify-content: ${
-            input.buttonAlignment || "flex-start"
-        };`
-    >
-        <ebay-button
-            disabled=state.prevButtonDisabled
-            onClick("goToPreviousStep")
+    <if(input.footer)>
+        <${input["footer"]}/>
+    </if>
+    <else>
+        <div
+            class="se-step-navigator__footer"
+            style=`justify-content: ${
+                input.buttonAlignment || "flex-start"
+            };`
         >
-            ${input.previousStepText}
-        </ebay-button>
-        <ebay-button
-            disabled=state.nextBtnDisabled
-            priority="primary"
-            onClick("goToNextStep")
-        >
-            ${input.nextStepText}
-        </ebay-button>
-    </div>
+            <ebay-button
+                disabled=state.prevButtonDisabled
+                priority=previousStepButtonPriority
+                onClick("goToPreviousStep")
+            >
+                ${input.previousStepText}
+            </ebay-button>
+            <ebay-button
+                disabled=state.nextBtnDisabled
+                priority=nextStepButtonPriority
+                onClick("goToNextStep")
+            >
+                ${input.nextStepText}
+            </ebay-button>
+        </div>
+    </else>
 </div>

@@ -10,16 +10,22 @@
             "@content-styles": "string",
             "@width": "string",
             "@buttonAlignment": "string",
+            "@nextStepButtonPriority": "string",
+            "@previousStepButtonPriority": "string",
             "@step <step>[]": {
                 "@a11yText": "string",
                 "@title": "string",
                 "@subtitle": "string",
-                "@content": "expression"
+                "@content": "expression",
+                "@moduleName": "string"
             },
 
             "@static-content": {
                 "type": "expression", 
                 "target-property": "static"
+            },
+            "@footer": {
+                "type": "expression"
             }
         }
     }
