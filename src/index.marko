@@ -53,14 +53,14 @@ $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed
             };`
         >
             <ebay-button
-                disabled=state.prevButtonDisabled
+                disabled=state.previousStepButtonDisabled
                 priority=previousStepButtonPriority
                 onClick("goToPreviousStep")
             >
                 ${input.previousStepText}
             </ebay-button>
             <ebay-button
-                disabled=state.nextBtnDisabled
+                disabled=state.nextStepButtonDisabled
                 priority=nextStepButtonPriority
                 onClick("goToNextStep")
             >

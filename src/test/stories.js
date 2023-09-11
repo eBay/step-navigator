@@ -213,3 +213,69 @@ export const StepperWithCustomFooter = () => ({
         footer: testComponent
     }
 });
+
+export const StepperWithPreviousButtonNotDisabled = () => ({
+    input: {
+        title: 'Step Navigator',
+        previousStepText: 'Previous',
+        nextStepText: 'Next',
+        buttonAlignment: 'flex-start',
+        static: staticComponent,
+        nextStepButtonPriority: 'secondary',
+        previousStepButtonPriority: 'primary',
+        previousStepButtonDisabled: false,
+        step: [
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 1 Title</span>'),
+                subtitle: createBody('<span>#1 Subtitle</span>'),
+                content: testComponent
+            },
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 2 Title</span>'),
+                subtitle: createBody('<span>#2 Subtitle</span>'),
+                content: testComponent2
+            },
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 3 Title</span>'),
+                subtitle: createBody('<span>#3 Subtitle</span>'),
+                content: testComponent3
+            }
+        ]
+    }
+});
+
+export const StepperWithNextButtonDisabled = () => ({
+    input: {
+        title: 'Step Navigator',
+        previousStepText: 'Previous',
+        nextStepText: 'Next',
+        buttonAlignment: 'flex-start',
+        static: staticComponent,
+        nextStepButtonPriority: 'secondary',
+        previousStepButtonPriority: 'primary',
+        nextStepButtonDisabled: true,
+        step: [
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 1 Title</span>'),
+                subtitle: createBody('<span>#1 Subtitle</span>'),
+                content: testComponent
+            },
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 2 Title</span>'),
+                subtitle: createBody('<span>#2 Subtitle</span>'),
+                content: testComponent2
+            },
+            {
+                a11yText: 'Some A11y Text',
+                title: createBody('<span>Step 3 Title</span>'),
+                subtitle: createBody('<span>#3 Subtitle</span>'),
+                content: testComponent3
+            }
+        ]
+    }
+});

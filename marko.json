@@ -12,6 +12,8 @@
             "@buttonAlignment": "string",
             "@nextStepButtonPriority": "string",
             "@previousStepButtonPriority": "string",
+            "@nextStepButtonDisabled": "boolean",
+            "@previousStepButtonDisabled": "boolean",
             "@step <step>[]": {
                 "@a11yText": "string",
                 "@title": "string",
