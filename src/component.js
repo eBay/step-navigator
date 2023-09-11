@@ -1,10 +1,13 @@
 module.exports = class {
     onCreate(input) {
+        this.isNextStepDisabled = input.nextStepButtonDisabled === undefined ? false : input.nextStepButtonDisabled;
+        this.isPreviousStepDisabled = input.previousStepButtonDisabled === undefined
+            ? true : input.previousStepButtonDisabled;
+
         this.state = {
             currentPage: 0,
-            nextStepButtonDisabled: input.nextStepButtonDisabled === undefined ? false : input.nextStepButtonDisabled,
-            previousStepButtonDisabled: input.previousStepButtonDisabled === undefined
-                ? true : input.previousStepButtonDisabled
+            nextStepButtonDisabled: this.isNextStepDisabled,
+            previousStepButtonDisabled: this.isPreviousStepDisabled
         };
     }
 
@@ -13,10 +16,6 @@ module.exports = class {
         const nextPageIdx = currentPage + 1;
 
         this.emit('next-button-click', { index: nextPageIdx });
-
-        // if (nextPageIdx > ) {
-        //     return;
-        // }
 
         if (currentPage < this.input.step.length - 1) {
             this.setState({ currentPage: nextPageIdx,
@@ -43,7 +42,7 @@ module.exports = class {
         this.setState({ currentPage: prevPageIdx, nextStepButtonDisabled: false, previousStepButtonDisabled: false });
 
         if (prevPageIdx === 0) {
-            this.setState({ nextStepButtonDisabled: false, previousStepButtonDisabled: true });
+            this.setState({ nextStepButtonDisabled: false, previousStepButtonDisabled: this.isPreviousStepDisabled });
 
             return;
         }
