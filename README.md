@@ -59,9 +59,10 @@ Use this component as a back and forth method for different views. A more usable
 | `buttonAlignment`					|`justify-content` types	| No| Alignment of bottom buttons. Defaults to `flex-start`. See [all types at MDN documentation on `justify-content`](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content). 
 | `nextStepButtonPriority`					|`ebay-button` `string` [types (primary, secondary, etc)](https://opensource.ebay.com/ebayui-core/?path=/story/buttons-ebay-button--standard&args=priority:tertiary)	| No| Priority of button, defaults to `"primary"`
 | `previousStepButtonPriority`					|`ebay-button` `string` [types (primary, secondary, etc)](https://opensource.ebay.com/ebayui-core/?path=/story/buttons-ebay-button--standard&args=priority:tertiary)	| No| Priority of button, defaults to `"secondary"`
+| `prevBtnDisabled`					| `boolean`	| No|  By default, disabled, but toggle-able here. Previous button will be disabled.
+| `nextBtnDisabled`					| `boolean`	| No|  By default, not disabled, but toggle-able here. Next button will be disabled.
 | `isProgressStepperHidden`					| boolean	| No| Toggle the ProgressStepper. Most often used when `steps <= 2` per Playbook specs. Default: `false`. 
 | `width`					| CSS value types (eg `700px`, `5em`, etc)	| No| Sets the width of the `progress-stepper` component at the top
-| `content-styles`					| CSS styles	| No| Overrides for the main `content` block of `se-step-navigator`.
 
 
 

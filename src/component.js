@@ -1,9 +1,9 @@
 module.exports = class {
-    onCreate() {
+    onCreate(input) {
         this.state = {
             currentPage: 0,
-            nextBtnDisabled: false,
-            prevButtonDisabled: true
+            nextBtnDisabled: input.nextBtnDisabled || false,
+            prevButtonDisabled: input.prevButtonDisabled || true
         };
     }
 
