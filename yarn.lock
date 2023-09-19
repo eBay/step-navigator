@@ -1804,9 +1804,9 @@
     enhanced-resolve-jest "^1.1.0"
     merge-source-map "^1.1.0"
 
-"@marko/testing-library@6":
+"@marko/testing-library@^6.1.4":
   version "6.1.4"
-  resolved "https://npm.corp.ebay.com/@marko/testing-library/-/testing-library-6.1.4.tgz#939ee78d732a50236dd9c013963dd357795fac5b"
+  resolved "https://artifactory.corp.ebay.com/artifactory/api/npm/npm-corp/@marko/testing-library/-/testing-library-6.1.4.tgz#939ee78d732a50236dd9c013963dd357795fac5b"
   integrity sha512-d4ulSs6kMlFvWNV0/Xq/Z79D5EpawR4e0nTqWIyXlGdrFSKDD/kaLrBBJLG3EN+NwHA8tMc0mgMTmK9+37MtIw==
   dependencies:
     "@testing-library/dom" "^9"
