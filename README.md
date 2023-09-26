@@ -74,4 +74,11 @@ Use this component as a back and forth method for different views. A more usable
 | `next-button-click`  | `{currentIdx}`  | No | Event returned when the Next button is clicked
 
 ## Contributing
-- Coming soon
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+
+## License
+
+[eBay License](/LICENSE.md)
