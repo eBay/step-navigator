@@ -1,6 +1,6 @@
 # 🪜 se-step-navigator
 
-Use this component as a back and forth method for different views. A more usable extension to [`ebay-progress-stepper`](https://github.com/eBay/ebayui-core/tree/master/src/components/ebay-progress-stepper)
+Use this Marko component as a back and forth method for different views. A more usable extension to [`ebay-progress-stepper`](https://github.com/eBay/ebayui-core/tree/master/src/components/ebay-progress-stepper)
 
 # Preview
 
