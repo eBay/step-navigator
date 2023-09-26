@@ -1,31 +1,29 @@
-### Description
-<!-- What is this PR about? What is the new feature? What problem does it solve? -->
+<!-- Insert GitHub issue number below -->
+Fixes #
 
-### Screenshots
-<!-- Upload screenshots if appropriate. -->
+<!-- Select which type of PR this is -->
+- [ ] This PR contains CSS changes
+- [ ] This PR does not contain CSS changes
 
-### Pre-submission
+## Description
+<!-- Briefly describe the proposed changes -->
 
-- [ ] This pull request title follows [Conventional Commit Specifications](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#specification),
-  in the format `<type>(<scope>): <subject> [JIRATICKET]`.
+## Notes
+<!-- Be sure to mention anything unusual, out-of-scope or new technical debt, etc -->
 
-- [ ] All relevant JIRA ticket(s) are detailed in the PR description.
+## Screenshots
+<!-- Upload screenshots of UI before & after these changes -->
 
-- [ ] I have updated the **documentation** (ex: `README.md`) and comments in the code affected by this PR.
-  
-- [ ] I have added/updated the relevant stories.
+## Checklist
+<!-- Acknowledge completion of steps in checklists below. Delete lists that are not applicable -->
 
-- [ ] I have added/updated unit tests for the feature.
+<!-- For all PR types -->
+- [ ] I verify the build is in a non-broken state
+- [ ] I verify all changes are within scope of the linked issue
 
-- I verified the changes are working on these main browsers:
-    - [ ] Chrome
-    - [ ] Chrome on Android
-    - [ ] Safari
-    - [ ] Safari on iPhone Latest
-    - [ ] Safari on iPad Latest
-    - [ ] Microsoft Edge
-    - [ ] Firefox
-
-### Jira tickets
-
-- [JIRAPRJ-XXXX](https://jirap.corp.ebay.com/browse/JIRAPRJ-XXXX)
+<!-- For CSS changes -->
+- [ ] I regenerated all CSS files under dist folder
+- [ ] I tested the UI in all supported browsers
+- [ ] I did a visual regression check of the components impacted by doing a Percy build and approved the build
+- [ ] I tested the UI in dark mode and RTL mode
+- [ ] I added/updated/removed Storybook coverage as appropriate
