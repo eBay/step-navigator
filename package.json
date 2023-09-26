@@ -25,9 +25,11 @@
         "selling-ui",
         "nodejs",
         "marko",
-        "ebay"
+        "ebay",
+        "step-navigator",
+        "stepper"
     ],
-    "author": "DL-eBay-selling-ui-dev@corp.ebay.com",
+    "author": "pcanella@ebay.com",
     "license": "ISC",
     "dependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.22.5",
