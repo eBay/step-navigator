@@ -36,13 +36,15 @@
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
         "jest-cli": "^29.6.1",
-        "jest-environment-jsdom": "^29.6.1",
-        "semver": "6.3.1"
+        "jest-environment-jsdom": "^29.6.1"    
     },
     "peerDependencies": {
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
         "marko": "^4 || ^5"
+    },
+    "overrides": {
+        "semver": "6.3.1"
     },
     "devDependencies": {
         "@babel/core": "^7",
@@ -71,6 +73,7 @@
         "less": "^3",
         "less-loader": "^7",
         "marko": "^4 || 5",
+        "semver": "6.3.1",
         "stylelint": "^9",
         "stylelint-config-standard": "^20"
     },
