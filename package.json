@@ -1,6 +1,6 @@
 {
     "name": "@ebay/selling-ui-step-navigator",
-    "version": "0.0.23",
+    "version": "0.0.24",
     "description": "This component allows a multi step process with the ability to go back and forth on views",
     "scripts": {
         "lint": "yarn lint:less && yarn lint:js",
@@ -36,7 +36,7 @@
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16",
         "jest-cli": "^29.6.1",
-        "jest-environment-jsdom": "^29.6.1"    
+        "jest-environment-jsdom": "^29.6.1"
     },
     "peerDependencies": {
         "@ebay/ebayui-core": "^12",
