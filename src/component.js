@@ -15,7 +15,7 @@ module.exports = class {
         const { currentPage } = this.state;
         const nextPageIdx = currentPage + 1;
 
-        this.emit('next-button-click', { index: nextPageIdx });
+        this.emit('next-button-click', { prevIndex: currentPage, index: nextPageIdx });
 
         if (currentPage < this.input.step.length - 1) {
             this.setState({ currentPage: nextPageIdx,
@@ -33,7 +33,7 @@ module.exports = class {
         const { currentPage } = this.state;
         const prevPageIdx = currentPage - 1;
 
-        this.emit('previous-button-click', { index: prevPageIdx });
+        this.emit('previous-button-click', { prevIndex: currentPage, index: prevPageIdx });
 
         if (prevPageIdx < 0) {
             return;
