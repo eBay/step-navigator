@@ -12,8 +12,8 @@ module.exports = class {
     }
 
     onInput(input) {
-        this.state.nextStepButtonDisabled = input.nextStepButtonDisabled
-        this.state.previousStepButtonDisabled = input.previousStepButtonDisabled
+        this.state.nextStepButtonDisabled = input.nextStepButtonDisabled;
+        this.state.previousStepButtonDisabled = input.previousStepButtonDisabled;
     }
 
     goToNextStep() {
@@ -59,7 +59,7 @@ module.exports = class {
                 nextStepButtonDisabled:
                 this.state?.nextStepButtonDisabled,
                 previousStepButtonDisabled:
-                this.state?.previousStepButtonDisabled 
+                this.state?.previousStepButtonDisabled
             });
 
             return;
