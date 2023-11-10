@@ -11,6 +11,11 @@ module.exports = class {
         };
     }
 
+    onInput(input) {
+        this.state.nextStepButtonDisabled = input.nextStepButtonDisabled;
+        this.state.previousStepButtonDisabled = input.previousStepButtonDisabled;
+    }
+
     goToNextStep() {
         const { currentPage } = this.state;
         const nextPageIdx = currentPage + 1;
@@ -19,11 +24,14 @@ module.exports = class {
 
         if (currentPage < this.input.step.length - 1) {
             this.setState({ currentPage: nextPageIdx,
-                nextStepButtonDisabled: false, previousStepButtonDisabled: false });
+                nextStepButtonDisabled:
+                this.state?.nextStepButtonDisabled,
+                previousStepButtonDisabled:
+                this.state?.previousStepButtonDisabled });
         }
 
         if (nextPageIdx === this.input.step.length - 1) {
-            this.setState({ previousStepButtonDisabled: false });
+            this.setState({ previousStepButtonDisabled: this.state?.previousStepButtonDisabled });
 
             return;
         }
@@ -39,10 +47,20 @@ module.exports = class {
             return;
         }
 
-        this.setState({ currentPage: prevPageIdx, nextStepButtonDisabled: false, previousStepButtonDisabled: false });
+        this.setState({ currentPage: prevPageIdx,
+            nextStepButtonDisabled:
+            this.state?.nextStepButtonDisabled,
+            previousStepButtonDisabled:
+            this.state?.previousStepButtonDisabled
+        });
 
         if (prevPageIdx === 0) {
-            this.setState({ nextStepButtonDisabled: false, previousStepButtonDisabled: this.isPreviousStepDisabled });
+            this.setState({
+                nextStepButtonDisabled:
+                this.state?.nextStepButtonDisabled,
+                previousStepButtonDisabled:
+                this.state?.previousStepButtonDisabled
+            });
 
             return;
         }
