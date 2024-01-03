@@ -4,7 +4,11 @@ Use this Marko component as a back and forth method for different views. A more 
 
 # Preview
 
-![giphy (1)](https://media.github.corp.ebay.com/user/6936/files/3e64669c-4886-44ea-acd9-c5fb073de690)
+
+
+https://github.com/eBay/step-navigator/assets/4923719/77de62c5-6f28-4c2a-98f7-58a79466a2bd
+
+
 
 
 # Usage
