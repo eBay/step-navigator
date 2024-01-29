@@ -14,6 +14,8 @@
             "@previousStepButtonPriority": "string",
             "@nextStepButtonDisabled": "boolean",
             "@previousStepButtonDisabled": "boolean",
+            "@nextStepTracking": "object",
+            "@previousStepTracking": "object",
             "@step <step>[]": {
                 "@a11yText": "string",
                 "@title": "string",
