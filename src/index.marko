@@ -1,5 +1,6 @@
 $ const { currentPage } = state || {};
-$ const { isProgressStepperHidden = false, width, nextStepButtonPriority = 'primary', previousStepButtonPriority = 'secondary' } = input;
+$ const { isProgressStepperHidden = false, width, nextStepButtonPriority = 'primary', previousStepButtonPriority = 'secondary', 
+    previousStepTracking = {}, nextStepTracking = {} } = input;
 $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed' : 'se-step-navigator__stepper-wrapper';
 <div class="se-step-navigator">
     <if(input.title)>
@@ -53,6 +54,7 @@ $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed
             };`
         >
             <ebay-button
+                data-click=(previousStepTracking)
                 disabled=state.previousStepButtonDisabled
                 priority=previousStepButtonPriority
                 onClick("goToPreviousStep")
@@ -60,6 +62,7 @@ $ const stepperWrapperClass = width ? 'se-step-navigator__stepper-wrapper--fixed
                 ${input.previousStepText}
             </ebay-button>
             <ebay-button
+                data-click=(nextStepTracking)
                 disabled=state.nextStepButtonDisabled
                 priority=nextStepButtonPriority
                 onClick("goToNextStep")
