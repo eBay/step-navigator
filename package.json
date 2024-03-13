@@ -78,7 +78,7 @@
         "stylelint-config-standard": "^20"
     },
     "publishConfig": {
-        "registry": "https://artifactory.corp.ebay.com/artifactory/api/npm/npm-selling/"
+        "registry": "https://registry.npmjs.com"
     },
     "storybook-deployer": {
         "commitMessage": "chore: deploy storybook"
