@@ -33,7 +33,7 @@
     "license": "ISC",
     "dependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.22.5",
-        "@ebay/ebayui-core": "^12",
+        "@ebay/ebayui-core": "^12.8.1",
         "@ebay/skin": "^16",
         "jest-cli": "^29.6.1",
         "jest-environment-jsdom": "^29.6.1"
@@ -53,7 +53,7 @@
         "@commitlint/cli": "^8",
         "@commitlint/config-conventional": "^8",
         "@ebay/browserslist-config": "^1",
-        "@ebay/ebayui-core": "^12",
+        "@ebay/ebayui-core": "^12.8.1",
         "@ebay/skin": "^16",
         "@marko/fixture-snapshots": "^2",
         "@marko/jest": "^5.1",
