@@ -1443,10 +1443,10 @@
   resolved "https://registry.npmjs.org/@ebay/browserslist-config/-/browserslist-config-1.3.0.tgz#f871f827b1ba8c3619f6e139d6c01839f78592c8"
   integrity sha512-wDH8MLHLrhU68D1aYV5EH+RTiBw/Kj8b6FpwjGI5V/oXropvHRcHmmGjUzFxw1DU0ImHjSgdB78Z9v0mjJ6CHQ==
 
-"@ebay/ebayui-core@^12":
-  version "12.7.0"
-  resolved "https://registry.npmjs.org/@ebay/ebayui-core/-/ebayui-core-12.7.0.tgz#b20e5b0d04820220e15436e922f0599a5c4fa1a0"
-  integrity sha512-hRsaAh5CRFV1+9oH9YX981CmueNJj22nZpEG/ibq+lM1v7DfILJ/NiCZg059jvjpfBj2F+nLACZ0DJqKZNiTmg==
+"@ebay/ebayui-core@^12.8.1":
+  version "12.8.1"
+  resolved "https://registry.yarnpkg.com/@ebay/ebayui-core/-/ebayui-core-12.8.1.tgz#e5d2fe8b2fc5e3c01db4433b655dc9e7798ecc54"
+  integrity sha512-m0rpRQNE/M7eIqGUcDI2tEUfmyMxhG7rFXxGFdsKwM2ap2XXUczMNEdMm0OY5XCBkfVnYoprwIFIG+gpdimauw==
   dependencies:
     "@marko-tags/subscribe" "^0.4.2"
     makeup-active-descendant "0.6.1"
