@@ -35,8 +35,8 @@
         "@babel/plugin-transform-modules-commonjs": "^7.24.7",
         "@ebay/ebayui-core": "^12",
         "@ebay/skin": "^16.9.2",
-        "jest-cli": "^29.6.1",
-        "jest-environment-jsdom": "^29.6.1"
+        "jest-cli": "^30.0.0",
+        "jest-environment-jsdom": "^30.0.0"
     },
     "peerDependencies": {
         "@ebay/ebayui-core": "^12",
